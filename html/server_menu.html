@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<title>Project</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<style>
+  body{
+    background-image: url("photos/4.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  background-position: center top;
+  }
+</style>
+
+
+
+
+<body class="w3-black" >
+
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home 
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home" style="opacity:10%">
+    <h1 class="w3-jumbo">Linux Automation Site </h1>
+    <p><i class="w3-jumbo">project</i></p>
+  </header>-->
+  <h1 style="font-size: 5vw; margin-top: 3vh;font-style: oblique;">Linux Automation Site</h1>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">ABOUT:-</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p style="font-size: 25px; color:white; margin-top: 3vh;font-style: oblique;">Hey Everyone!
+      Welcome to the Site.  <br />
+      Have a  Great Day.
+      
+
+    </p>
+    
+    <br><br><br><br><br><br>
+    
+  <!-- Contact Section -->
+  
+  <!--Useradd-->
+    <form action="http://192.168.43.228/cgi-bin/server/user/user.py" style="max-width:40vw">
+      <h5> <font size="5px">Add User</font></h5>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Username" required name="User_Name"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit" width="25%">
+          <i class="fa fa-paper-plane"></i> ADD USER
+        </button>
+      </p>
+       <br><br>
+    </form>
+
+
+
+  <!--Groupadd-->
+    <form action="http://192.168.43.228/cgi-bin/server/group/group.py"  style="max-width:40vw">
+      <h5> <font size="5px">Create Group</font></h5>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Groupname" required name="Group_Name"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit" width="25%">
+          <i class="fa fa-paper-plane"></i> Create
+        </button>
+      </p>
+       <br><br>
+    </form>
+
+  <!--makedir-->
+    <form action="http://192.168.43.228/cgi-bin/server/directory/dir.py" style="max-width:70vw">
+      <h5> <font size="5px">Make Directory</font></h5>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="/root/Desktop/" required name="Dir_Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Group name" required name="Grp_Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Owner name" required name="Own_Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="file-permission format: {xxxx : 0<=x<=7}" pattern =[0-7]{4} required name="Mode"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit" width="25%">
+          <i class="fa fa-paper-plane"></i> Make
+        </button>
+      </p>
+       <br><br>
+    </form>
+
+    <!--makefile-->
+    <form action="http://192.168.43.228/cgi-bin/server/file/file.py" style="max-width:70vw">
+      <h5> <font size="5px">Make File</font></h5>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="/root/Desktop/" required name="File_Path"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="File-Owner" required name="File_Own"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="File-Group" required name="File_Group"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="file-permission format: {xxxx : 0<=x<=7} " required name="Mode" pattern =[0-7]{4}></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit" width="25%">
+          <i class="fa fa-paper-plane"></i> Make
+        </button>
+      </p>
+       <br><br>
+    </form>
+
+     <!--ipstatic-->
+    <form action="http://192.168.43.228/cgi-bin/staticip.py"  style="max-width:50vw">
+      <h5> <font size="5px">Static Ip</font></h5>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Connection-name" required name="Con_Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Network-Card-Name" required name="Network_Card_Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Network-Card-Type" required name="Network_Card_Type"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Ip :  ex:- 192.168.43.1" required name="Ip"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Gateway : ex:- 192.168.43.1" required name="Gateway"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Dns : ex:- 192.168.43.1" required name="Dns"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit" width="25%">
+          <i class="fa fa-paper-plane"></i> Make
+        </button>
+      </p>
+       <br><br>
+    </form>
+
+
+ <!--Hostname-->
+    <form action="http://192.168.43.228/cgi-bin/server/hostname/hostname.py" style="max-width:40vw">
+      <h5> <font size="5px">Host</font></h5>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Hostname" required name="Hostname"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit" width="25%">
+          <i class="fa fa-paper-plane"></i> SetName
+        </button>
+      </p>
+       <br><br>
+    </form>
+
+
+
+   <!--Reboot-->
+    <form action="http://192.168.43.228/cgi-bin/server/reboot/reboot.py" style="max-width:50vw">
+      <h5> <font size="5px">Reboot</font></h5>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit" width="25%">
+          <i class="fa fa-paper-plane"></i> Reboot it!
+        </button>
+      </p>
+       <br><br>
+    </form>
+
+<!--Package installation-->
+    <form action="http://192.168.43.228/cgi-bin/server/software/software.py" style="max-width:40vw">
+      <h5> <font size="5px">Install Package</font></h5>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="PackageName" required name="Package"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit" width="25%">
+          <i class="fa fa-paper-plane"></i> Install
+        </button>
+      </p>
+       <br><br>
+    </form>
+
+ <!--Tar-->
+    <form action="http://192.168.43.228/cgi-bin/server/tar/tar.py"  style="max-width:50vw">
+      <h5> <font size="5px">Make Archive</font></h5>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Source Path ex:-/acd/def" required name="Src_Path"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Destination Path ex:-/acd/def/name.tar.bz2" required name="Dest_Path"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Format-type  ex:-{gz,bz2,tar}" required name="Format"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit" width="25%">
+          <i class="fa fa-paper-plane"></i> Create Tar
+        </button>
+      </p>
+       <br><br>
+    </form>
+
+    <!--Copy-->
+    <form action="http://192.168.43.228/cgi-bin/server/copy/copy.py"  style="max-width:50vw">
+      <h5> <font size="5px">Copy File</font></h5>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Source file Path ex:-/acd/def" required name="Src_Path"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Destination file Path ex:-/acd/def" required name="Dest_Path"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit" width="25%">
+          <i class="fa fa-paper-plane"></i> Copy
+        </button>
+      </p>
+       <br><br>
+    </form>
+
+
+      
+
+<!--Service-->
+    <form action="http://192.168.43.228/cgi-bin/service.py"  style="max-width:50vw">
+      <h5> <font size="5px">Service</font></h5>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Service" required name="Service"></p>
+     <p style="font-size:25px"><input  type="radio" value="started" name="Service_stat" style="margin:10px">Start</p>
+    <p style="font-size:25px"><input  type="radio" value="stoped" name="Service_stat" style="margin:10px">Stop</p>
+	 <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit" width="25%">
+          <i class="fa fa-paper-plane"></i> Done
+        </button
+      </p>
+       <br><br>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+  
+<footer>
+  <center> 
+  <h6> !!!!!Conatact Server Administrator For More Service!!!!!!!  </h6>
+</center>
+</footer>
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>
