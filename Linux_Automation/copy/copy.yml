@@ -1,0 +1,8 @@
+- hosts: root496
+  vars_files:
+       - copyvar.yml
+  tasks:
+    - copy:
+        src: "{{ srcfile }}"
+        remote_src: yes
+        dest: "{{ destfile }}"

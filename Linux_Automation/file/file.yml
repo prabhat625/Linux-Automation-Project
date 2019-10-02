@@ -1,0 +1,10 @@
+- hosts: root182
+  vars_files:
+     - filevar.yml
+  tasks:
+     - file:
+          path: "{{ filepath }}"
+          owner: "{{ own }}"
+          group: "{{ grp }}"
+          mode: " {{mod }}"
+          state: touch

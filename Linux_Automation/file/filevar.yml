@@ -1,0 +1,4 @@
+filepath: "/home/prabhat/server.txt"
+own: "prabhat"
+grp: "prabhat"
+mod: "0777"

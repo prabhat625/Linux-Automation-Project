@@ -1,0 +1,8 @@
+- hosts: root496
+  vars_files:
+      - tarvar.yml
+  tasks:
+     - archive:
+            path: "{{ filesrc }}"
+            dest: "{{ filedest }}"
+            format: "{{ form }}"

@@ -1,0 +1,12 @@
+- hosts: localhost
+  vars_files:
+       - var.yml
+  tasks:
+    - lineinfile: 
+         path: "/etc/ansible/hosts"
+         line: "[{{ username }}{{ number }}]"
+    - lineinfile:
+         path: "/etc/ansible/hosts"
+         line: "{{ ip }} ansible_user={{ username }} ansible_password={{ passwd }}"
+
+

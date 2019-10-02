@@ -1,0 +1,9 @@
+  vars_files:
+     - dirvar.yml
+  tasks:
+     - file:
+          path: "{{ dirpath }}"
+          owner: "{{ own }}"
+          group: "{{ grp }}"
+          mode: "{{ mod }}"
+          state: directory

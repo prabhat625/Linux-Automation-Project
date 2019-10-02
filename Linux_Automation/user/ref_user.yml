@@ -1,0 +1,6 @@
+  vars_files:
+     - uservar.yml
+  tasks:
+      - user:
+          name: "{{ username }}"
+          state: present

@@ -1,0 +1,5 @@
+  vars_files:
+       - hostvar.yml
+  tasks:
+     - hostname:
+             name: "{{ host }}"

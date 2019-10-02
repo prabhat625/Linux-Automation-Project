@@ -1,0 +1,4 @@
+dirpath: "/home/prabhat/server2"
+own: "prabhat"
+grp: "prabhat"
+mod: "0777"
